@@ -9,9 +9,9 @@ var titleCaseThree= function(stringToCaps)
     var returnedString=[];
     var articles = ["if", "or", "and", "else", "in", "to","the"];
     arrayOfWords.forEach(function(word, index){
+        var length = arrayOfWords.length - 1;
 
-
-      if((articles.indexOf(word) !== -1) && (index != 0))
+      if((articles.indexOf(word) !== -1) && (index != 0) &&  (index !== length))
             {
                 returnedString.push(word);
             }
