@@ -26,3 +26,19 @@ var titleCaseThree= function(stringToCaps)
     var wordString = returnedString.join(" ");
      return wordString;
 };
+
+
+$(document).ready(function() {
+    $("form#title-case").submit(function(event)
+{
+        var title = $("input#titleCaseThree").val();
+        var result = titleCaseThree(title);
+
+    $(".UpperCase").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+});
+
+
+});
