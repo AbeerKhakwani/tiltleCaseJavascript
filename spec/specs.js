@@ -6,9 +6,12 @@ describe('titleCase', function() {
         expect(titleCaseThree("hat cat")).to.equal("Hat Cat");
     });
     it("uncapitalizes the the articles", function() {
-        expect(titleCaseThree("and")).to.equal("and");
+        expect(titleCaseThree("jill and")).to.equal("Jill and");
     });
-    it("uncapitalizes the the articles", function() {
+    it("uncapitalizes the the articles in a multy word title", function() {
         expect(titleCaseThree("pride and prejudice")).to.equal("Pride and Prejudice");
+    });
+    it("uncapitalizes the the articles except if they are the first word", function() {
+        expect(titleCaseThree("the cat and the hat")).to.equal("The Cat and the Hat");
     });
 });
