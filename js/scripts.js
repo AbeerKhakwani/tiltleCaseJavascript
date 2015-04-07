@@ -43,23 +43,23 @@ var titleCaseTwo= function(stringToCaps){
 // };
 var article= function (word){
 
-    var articles = ["and", "if", "or", "else", "in", "to"];
+    var articles = ["if", "or", "and", "else", "in", "to"];
     var wordreturned= "";
 
-    if($.inArray(word, articles) > 0) {
+    if($.inArray(word, articles) >= 0) {
+
+        wordreturned+=word;
+    
+    }
+    else {
+
 
         var arrayOfWord = word.split("");
         arrayOfWord[0]= arrayOfWord[0].toUpperCase();
         var wordCase= arrayOfWord.join("");
 
         wordreturned+= wordCase;
-        wordreturned+=word;
 
-
-    }
-    else {
-
-        wordreturned+=word;
     }
 
     return wordreturned;
